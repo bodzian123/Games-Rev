@@ -1,0 +1,13 @@
+<%= form_with(model: [ @movie, @movie.comentages.build ], local: true) do |form| %>
+      <p>
+        <%= form.label :comenter %><br>
+        <%= form.text_field :comenter %>
+      </p>
+      <p>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+      </p>
+      <p>
+        <%= form.submit %>
+      </p>
+<% end %>

@@ -1,0 +1,15 @@
+
+<p>
+  <strong>Commenter:</strong>
+  <%= opinion.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= opinion.body %>
+</p
+<p>
+  <%= link_to 'Destroy Comment', [opinion.music, opinion],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

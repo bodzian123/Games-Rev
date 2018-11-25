@@ -1,0 +1,2 @@
+module MusicCommentHelper
+end

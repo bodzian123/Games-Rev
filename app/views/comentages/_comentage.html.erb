@@ -1,0 +1,15 @@
+
+<p>
+  <strong>Commenter:</strong>
+  <%= comentage.comenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comentage.body %>
+</p
+<p>
+  <%= link_to 'Destroy Comment', [comentage.movie, comentage],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

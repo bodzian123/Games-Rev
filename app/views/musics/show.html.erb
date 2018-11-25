@@ -1,0 +1,18 @@
+<p>
+  <strong>Title:</strong>
+  <%= @music.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @music.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @music.opinions %>
+
+<h2>Add a comment:</h2>
+<%= render 'opinions/form' %>
+
+<%= link_to 'Edit', edit_music_path(@music) %>
+<%= link_to 'Back', musics_path %>
