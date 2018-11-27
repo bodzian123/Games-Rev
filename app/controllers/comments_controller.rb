@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  before_action :authenticate_user!
   def create
     @game = Game.find(params[:game_id])
     @comment = @game.comments.create(comment_params)

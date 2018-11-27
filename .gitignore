@@ -21,3 +21,22 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore bundler config.
+/.bundle
+
+public/assets
+.idea
+config/database.yml
+workspace.yml
+.keep
+/public/system/**/*
+/public/assets/**/*
+
+.DS_Store
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/settings.yml
+dump.rdb
+npm-debug.log
