@@ -14,5 +14,11 @@ Rails.application.routes.draw do
     resources :opinions
   end
 
+  resources :users do
+    resources :games
+    resources :movies
+    resources :musics
+  end
+
   root 'home#index'
 end
