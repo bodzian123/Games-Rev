@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
   get 'home/index'
+
+  scope "/gamer" do
+    resources :users do
+      resources :games
+      resources :movies
+      resources :musics
+    end
+  end
 
   resources :games do
     resources :comments
@@ -12,12 +21,6 @@ Rails.application.routes.draw do
 
   resources :musics do
     resources :opinions
-  end
-
-  resources :users do
-    resources :games
-    resources :movies
-    resources :musics
   end
 
   root 'home#index'

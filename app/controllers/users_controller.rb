@@ -35,6 +35,12 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+
+    if params[:user][:password].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
+
   end
 
   def destroy

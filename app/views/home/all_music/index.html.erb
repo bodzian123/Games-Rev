@@ -1,4 +1,4 @@
-<h1>Listing musics</h1>
+<h1>List of artists</h1>
 
 <table>
   <tr>
@@ -12,10 +12,6 @@
       <td><%= music.title %></td>
       <td><%= music.text %></td>
       <td><%= link_to 'Show', music_path(music) %></td>
-      <td><%= link_to 'Edit', edit_music_path(music) %></td>
-      <td><%= link_to 'Destroy', music_path(music),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
