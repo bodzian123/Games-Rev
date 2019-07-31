@@ -2,22 +2,25 @@ class MusicsController < ApplicationController
   before_action :authenticate_user!
   def index
     @musics = Music.all
+
+    @user_musics = current_user.musics
   end
 
   def show
     @music = Music.find(params[:id])
+    @user_music = current_user.musics.find(params[:id])
   end
 
   def new
-    @music = Music.new
+    @music = current_user.musics.new
   end
 
   def edit
-    @music = Music.find(params[:id])
+    @music = current_user.musics.find(params[:id])
   end
 
   def create
-    @music = Music.new(music_params)
+    @music = current_user.musics.new(music_params)
 
     if @music.save
       redirect_to @music
@@ -28,7 +31,7 @@ class MusicsController < ApplicationController
   end
 
   def update
-    @music = Music.find(params[:id])
+    @music = current_user.musics.find(params[:id])
 
     if @music.update(music_params)
       redirect_to @music
@@ -38,7 +41,7 @@ class MusicsController < ApplicationController
   end
 
   def destroy
-    @music = Music.find(params[:id])
+    @music = current_user.musics.find(params[:id])
     @music.destroy
 
     redirect_to musics_path

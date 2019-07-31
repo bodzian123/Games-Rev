@@ -7,7 +7,7 @@
     <th></th>
   </tr>
 
-  <% @musics.each do |music| %>
+  <% @user_musics.clone.each do |music| %>
     <tr>
       <td><%= music.title %></td>
       <td><%= music.text %></td>

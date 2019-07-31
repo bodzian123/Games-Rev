@@ -1,18 +1,18 @@
 <p>
   <strong>Title:</strong>
-  <%= @game.title %>
+  <%= @user_game.title %>
 </p>
 
 <p>
   <strong>Text:</strong>
-  <%= @game.text %>
+  <%= @user_game.text %>
 </p>
 
 <h2>Comments</h2>
-<%= render @game.comments %>
+<%= render @user_game.comments %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_game_path(@game) %>
+<%= link_to 'Edit', edit_game_path(@user_game) %>
 <%= link_to 'Back', games_path %>

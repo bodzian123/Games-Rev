@@ -1,18 +1,18 @@
 <p>
   <strong>Title:</strong>
-  <%= @music.title %>
+  <%= @user_music.title %>
 </p>
 
 <p>
   <strong>Text:</strong>
-  <%= @music.text %>
+  <%= @user_music.text %>
 </p>
 
 <h2>Comments</h2>
-<%= render @music.opinions %>
+<%= render @user_music.opinions %>
 
 <h2>Add a comment:</h2>
 <%= render 'opinions/form' %>
 
-<%= link_to 'Edit', edit_music_path(@music) %>
+<%= link_to 'Edit', edit_music_path(@user_music) %>
 <%= link_to 'Back', musics_path %>

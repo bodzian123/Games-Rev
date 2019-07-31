@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  get 'home/games'
+  get 'home/movies'
+  get 'home/musics'
+
   scope "/gamer" do
     resources :users do
       resources :games

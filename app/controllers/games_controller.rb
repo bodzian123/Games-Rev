@@ -2,25 +2,24 @@ class GamesController < ApplicationController
   before_action :authenticate_user!
   def index
     @games = Game.all
-
     @user_games = current_user.games
   end
 
   def show
-    @user_game = current_user.game.find(params[:id])
+    @user_game = current_user.games.find(params[:id])
     @game = Game.find(params[:id])
   end
 
   def new
-    @game = User.find(params[:id]).game.new
+    @game = current_user.games.new
   end
 
   def edit
-    @game = User.find(params[:id]).game.find(params[:id])
+    @game = current_user.games.find(params[:id])
   end
 
   def create
-    @game = User.find(params[:id]).Game.new(game_params)
+    @game = current_user.games.new(game_params)
 
     if @game.save
       redirect_to @game
@@ -31,7 +30,7 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game = User.find(params[:id]).Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
 
     if @game.update(game_params)
       redirect_to @game
@@ -41,7 +40,7 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @game = User.find(params[:id]).Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
     @game.destroy
 
     redirect_to games_path
