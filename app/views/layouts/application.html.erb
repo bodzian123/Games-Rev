@@ -9,48 +9,7 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-static-top">
-
-      <div class="container-fluid">
-
-        <div class="row">
-
-          <div class="col-md-3 text-center">
-            <button class="low-title">
-              <%= link_to 'Games REV', home_index_path %>
-            </button>
-          </div>
-
-          <div class="col-md-2 text-center">
-            <button class="low-title">
-              <%= link_to 'My Games', games_path %>
-            </button>
-          </div>
-
-          <div class="col-md-2 text-center">
-            <button class="low-title">
-              <%= link_to 'My music', musics_path %>
-            </button>
-          </div>
-
-          <div class="col-md-2 text-center">
-            <button class="low-title">
-              <%= link_to 'My movies', movies_path %>
-            </button>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <button class="low-title">
-              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </nav>
+    <%= render 'layouts/navbar' %>
 
     <%= yield %>
 
