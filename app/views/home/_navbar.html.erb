@@ -5,31 +5,31 @@
     <div class="row">
 
       <div class="col-md-3 text-center ">
-        <div class="logo-button">
-          <%= link_to 'GREVS', home_index_path %>
-        </div>
+        <a href='/'>
+        <h1 style="margin-top: 10px; font-size:44px;">  G  </h1>
+        </a>
       </div>
 
       <div class="col-md-2 text-center">
-        <button class="low-title">
+        <button class="low-title" style="margin-top:6px;">
           <%= link_to 'My Games', games_path %>
         </button>
       </div>
 
       <div class="col-md-2 text-center">
-        <button class="low-title">
+        <button class="low-title" style="margin-top:6px;">
           <%= link_to 'My music', musics_path %>
         </button>
       </div>
 
       <div class="col-md-2 text-center">
-        <button class="low-title">
+        <button class="low-title" style="margin-top:6px;">
           <%= link_to 'My movies', movies_path %>
         </button>
       </div>
 
       <div class="col-md-3 text-center">
-        <button class="low-title">
+        <button class="low-title" style="margin-top:6px;">
           <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
         </button>
       </div>

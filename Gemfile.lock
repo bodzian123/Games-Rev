@@ -44,6 +44,7 @@ GEM
     autoprefixer-rails (9.3.1)
       execjs
     bcrypt (3.1.12)
+    bcrypt (3.1.12-x64-mingw32)
     bcrypt (3.1.12-x86-mingw32)
     bindex (0.5.0)
     bootstrap-sass (3.4.1)
@@ -78,6 +79,7 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    ffi (1.9.25-x64-mingw32)
     ffi (1.9.25-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -107,10 +109,13 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.5-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.5-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (1.1.4)
+    pg (1.1.4-x64-mingw32)
     pg (1.1.4-x86-mingw32)
     public_suffix (3.0.3)
     puma (3.12.0)
@@ -200,6 +205,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
