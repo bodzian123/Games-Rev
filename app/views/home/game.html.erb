@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @game.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @game.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @game.comments %>
+
+<%= link_to 'Back', home_games_path %>

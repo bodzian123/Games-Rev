@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @movie.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @movie.comments %>
+
+<%= link_to 'Back', home_movies_path %>

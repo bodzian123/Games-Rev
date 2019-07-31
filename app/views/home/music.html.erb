@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @music.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @music.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @music.comments %>
+
+<%= link_to 'Back', home_musics_path %>

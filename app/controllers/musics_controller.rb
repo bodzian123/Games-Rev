@@ -1,14 +1,13 @@
 class MusicsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @musics = Music.all
-
     @user_musics = current_user.musics
+    @musics = Music.all
   end
 
   def show
-    @music = Music.find(params[:id])
     @user_music = current_user.musics.find(params[:id])
+    @music = Music.find(params[:id])
   end
 
   def new
