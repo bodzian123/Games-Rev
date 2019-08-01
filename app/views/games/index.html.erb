@@ -1,24 +1,64 @@
-<h1>Listing games</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 text-center">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>About</th>
-    <th></th>
-  </tr>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+          <h1>Twoje Gry</h1>
+        </div>
+      </div>
 
-  <% @user_games.clone.each do |game| %>
-    <tr>
-      <td><%= game.title %></td>
-      <td><%= game.text %></td>
-      <td><%= link_to 'Show', game_path(game) %></td>
-      <td><%= link_to 'Edit', edit_game_path(game) %></td>
-      <td><%= link_to 'Destroy', game_path(game),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+      <div class="row">
 
-<%= link_to 'Add new review', new_game_path %>
-<%= link_to 'Main page', home_index_path %>
+        <div class="col-lg-4 col-lg-offset-4">
+          <a href="/games/new" class="glyphicon glyphicon-plus" aria-hidden="true" style="font-size:50px; color: black">
+          </a>
+        </div>
+
+      </div>
+
+      <table>
+
+        <div class="row" style="margin-top:30px;">
+          <div class="col-md-4">
+            <h2> Tytuł <h2/>
+          </div>
+          <div class="col-md-4">
+            <h2>Opis</h2>
+          </div>
+          <div class="col-md-4">
+            <h2>Opcje</h2>
+          </div>
+        </div>
+
+        <% @user_games.clone.each do |game| %>
+        <div class="container-fluid" style="margin-top: 20px;">
+          <div class="row">
+
+            <div class="col-md-4">
+              <%= game.title %>
+            </div>
+
+            <div class="col-md-4">
+              <%= game.text %>
+            </div>
+
+            <div class="col-md-4">
+              <%= link_to 'Podgląd', game_path(game) %>
+
+              <%= link_to 'Edycja', edit_game_path(game) %>
+
+              <%= link_to 'Usuń', game_path(game),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+
+          <% end %>
+
+      </table>
+
+    </div>
+  </div>
+</div>
