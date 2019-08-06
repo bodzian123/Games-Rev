@@ -1,0 +1,5 @@
+<%= form_with model: @user, html: { multipart: true } do |form| %>
+  <%= form.text_field :email %>
+  <%= form.file_field :avatar %>
+  <%= form.submit %>
+<% end %>

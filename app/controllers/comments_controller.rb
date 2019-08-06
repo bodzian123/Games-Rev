@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   def create
+    @user = current_user.email
     @game = Game.find(params[:game_id])
     @comment = @game.comments.create(comment_params)
     redirect_to game_path(@game)

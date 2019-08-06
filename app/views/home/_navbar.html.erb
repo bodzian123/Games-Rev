@@ -29,9 +29,19 @@
       </div>
 
       <div class="col-md-3 text-center">
-          <h1 style="margin-top: 10px; font-size:44px;">
-            <%= link_to('L', destroy_user_session_path, method: :delete, style: "color: red; text-decoration: none") %>
-          </h1>
+
+        <div class="dropdown">
+  <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <a href="">
+      <h1 style="margin-top: 10px; font-size:44px; color: red; text-decoration: none">L</h1>
+    </a>
+  </div>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><%= link_to 'Profil', user_path(current_user) %></li>
+    <li><%= link_to('Wyloguj', destroy_user_session_path, method: :delete) %></li>
+  </ul>
+</div>
+
       </div>
 
     </div>

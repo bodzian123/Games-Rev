@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'home/movies'
   get 'home/musics'
 
-  scope "/gamer" do
+  scope "/user" do
     resources :users do
       resources :games
       resources :movies
