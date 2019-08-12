@@ -44,9 +44,9 @@
             </ul>
           </div>
           <% else %>
-          <a href="users/sign_in">
-            <h1 style="margin-top: 10px; font-size:44px; color: red; text-decoration: none">L</h1>
-          </a>
+          <h1 style="margin-top: 10px; font-size:44px;">
+            <%= link_to('L', new_user_session_url, style: "color: red; text-decoration: none") %>
+          </h1>
         <% end %>
       </div>
 
