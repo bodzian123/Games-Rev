@@ -1,0 +1,57 @@
+<nav class="navbar navbar-static-top" style="background-color:rgba(89, 0, 156, 0.79); border-bottom: 2px solid rgb(58, 0, 150)">
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-3 text-center">
+        <a href='/' style="text-decoration:none">
+        <h1 style="margin-top: 10px; font-size:44px; color: rgb(23, 193, 27)">G</h1>
+        </a>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div style="margin-top: 20px;">
+          <%= link_to('Gry', games_path, style:"color:white;text-decoration:none;font-family: georgia;font-size: 30px;font-weight: bold;") %>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div style="margin-top: 20px;">
+          <%= link_to('Muzyka', musics_path, style:"color:white;text-decoration:none;font-family: georgia;font-size: 30px;font-weight: bold;") %>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div style="margin-top: 20px;">
+          <%= link_to('Filmy', movies_path, style:"color:white;text-decoration:none;font-family: georgia;font-size: 30px;font-weight: bold;") %>
+        </div>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <% if current_user %>
+          <div class="dropdown">
+            <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <a href="">
+                <h1 style="margin-top: 10px; font-size:44px; color: red; text-decoration: none">L</h1>
+              </a>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                <li><%= link_to 'Profil', user_path(current_user) %></li>
+                <li><%= link_to('Wyloguj', destroy_user_session_path, method: :delete) %></li>
+
+            </ul>
+          </div>
+          <% else %>
+          <a href="users/sign_in">
+            <h1 style="margin-top: 10px; font-size:44px; color: red; text-decoration: none">L</h1>
+          </a>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
