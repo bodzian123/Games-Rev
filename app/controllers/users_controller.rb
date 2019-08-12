@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def new
@@ -13,11 +13,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
     if @user.save
       redirect_to @user
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
 
     if @user.update(user_params)
       redirect_to @user
