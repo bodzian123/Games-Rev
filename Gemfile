@@ -28,6 +28,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use paperclip for image uploading
 gem "paperclip", '~> 6.1.0'
+# grape
+gem 'grape'
+gem 'grape-kaminari', :github => 'alexey-klimuk/grape-kaminari'
+# gem 'grape-entity'
+gem 'grape-swagger','~>0.21'
+gem 'grape-swagger-entity'
 # wdm
 gem 'wdm', '>= 0.1.0'
 # Use Redis adapter to run Action Cable in production
@@ -51,8 +57,15 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rspec-rails'
+  gem 'rspec-its'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'factory_girl_rails', :require => false
+  gem 'database_cleaner'
+  gem 'json_spec'
+  gem 'guard-rspec', require: false
+  gem 'shoulda'
+  gem 'paperclip-meta'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  mount GamesRevApi::Ver1::API => '/v1'
+
   get 'home/index'
 
   get 'home/games'
